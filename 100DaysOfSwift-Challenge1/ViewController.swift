@@ -7,11 +7,20 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let fm = FileManager.default
+        let path = Bundle.main.resourcePath!
+        let itens = try! fm.contentsOfDirectory(atPath: path)
+        
+        for item in itens {
+            if item.hasSuffix(".png") {
+                // faz algo
+            }
+        }
     }
 
 
