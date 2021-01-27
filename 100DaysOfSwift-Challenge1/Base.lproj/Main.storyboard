@@ -12,17 +12,30 @@
         <scene sceneID="I3v-LM-4H9">
             <objects>
                 <tableViewController id="rZg-QQ-QYK" customClass="ViewController" customModule="_00DaysOfSwift_Challenge1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vSl-oD-yND">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vSl-oD-yND">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Country" id="O1Q-UQ-zBa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Country" textLabel="mkA-FA-cIJ" imageView="E9y-ag-0Tj" style="IBUITableViewCellStyleDefault" id="O1Q-UQ-zBa">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O1Q-UQ-zBa" id="J2h-YN-hlW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mkA-FA-cIJ">
+                                            <rect key="frame" x="122" y="0.0" width="253" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="france.png" id="E9y-ag-0Tj">
+                                            <rect key="frame" x="20" y="0.0" width="87" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -40,24 +53,27 @@
         <!--Detail View Controller-->
         <scene sceneID="zQT-aZ-nm6">
             <objects>
-                <viewController id="aDG-X7-MuA" customClass="DetailViewController" customModule="_00DaysOfSwift_Challenge1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail" id="aDG-X7-MuA" customClass="DetailViewController" customModule="_00DaysOfSwift_Challenge1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dXS-f0-Tuf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HbS-0K-fAA">
-                                <rect key="frame" x="62" y="358" width="290" height="190"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="france.png" translatesAutoresizingMaskIntoConstraints="NO" id="U4u-Mt-Xrc">
+                                <rect key="frame" x="7" y="351.5" width="400" height="203"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cdv-Vc-nH7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HbS-0K-fAA" firstAttribute="leading" secondItem="cdv-Vc-nH7" secondAttribute="leading" constant="62" id="MOn-kB-H7F"/>
-                            <constraint firstItem="HbS-0K-fAA" firstAttribute="top" secondItem="cdv-Vc-nH7" secondAttribute="top" constant="314" id="cP3-c5-Lw7"/>
-                            <constraint firstItem="HbS-0K-fAA" firstAttribute="centerX" secondItem="cdv-Vc-nH7" secondAttribute="centerX" id="xRe-aG-mrK"/>
-                            <constraint firstItem="HbS-0K-fAA" firstAttribute="centerY" secondItem="cdv-Vc-nH7" secondAttribute="centerY" id="xtn-Vo-pAy"/>
+                            <constraint firstItem="U4u-Mt-Xrc" firstAttribute="centerX" secondItem="cdv-Vc-nH7" secondAttribute="centerX" id="Ce2-SF-8Bp"/>
+                            <constraint firstItem="cdv-Vc-nH7" firstAttribute="bottom" secondItem="U4u-Mt-Xrc" secondAttribute="bottom" constant="307.5" id="D4s-Mn-EBw"/>
+                            <constraint firstItem="U4u-Mt-Xrc" firstAttribute="leading" secondItem="cdv-Vc-nH7" secondAttribute="leading" constant="7" id="Q4R-g4-gsZ"/>
+                            <constraint firstItem="U4u-Mt-Xrc" firstAttribute="height" secondItem="dXS-f0-Tuf" secondAttribute="height" multiplier="0.226562" id="qFz-7R-9Z0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="U4u-Mt-Xrc" id="Frd-xP-6zd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mkj-TN-KsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,6 +99,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="france.png" width="200" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

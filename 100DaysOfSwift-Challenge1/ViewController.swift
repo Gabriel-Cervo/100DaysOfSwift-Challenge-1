@@ -42,6 +42,17 @@ class ViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let detailVC = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController else {
+            print("No Detail ViewController found")
+            return
+        }
+        
+        detailVC.imageName = countries[indexPath.row]
+        
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 
 
 }
