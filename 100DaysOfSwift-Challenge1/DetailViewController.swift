@@ -21,5 +21,20 @@ class DetailViewController: UIViewController {
         imageView.layer.borderColor = UIColor.lightGray.cgColor
         
         imageView.image = UIImage(named: imageToLoad)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareImage))
+    }
+    
+    @objc func shareImage() {
+        guard let imageData = imageView.image?.pngData() else {
+                print("No image found")
+                return
+        }
+        
+        let activityVC = UIActivityViewController(activityItems: [imageData], applicationActivities: [])
+        
+        activityVC.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        
+        present(activityVC, animated: true)
     }
 }
